@@ -116,10 +116,11 @@ class MainViewHolder(val cardView: CardView) : RecyclerView.ViewHolder(cardView)
             val intent = Intent(context, step.activity.java)
             context.startActivity(intent)
         }
+
         val color = if (step.highlight) {
             context.resources.getColor(R.color.secondaryLightColor)
         } else {
-            context.resources.getColor(R.color.primaryTextColor)
+            context.resources.getColor(R.color.secondaryTextColor)
         }
         header.setTextColor(color)
         description.setTextColor(color)
